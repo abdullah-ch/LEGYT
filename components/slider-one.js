@@ -1,22 +1,22 @@
-import React from "react";
-import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay, Navigation, EffectFade } from "swiper";
-import { Col, Container, Row } from "react-bootstrap";
-import { SliderOneData } from "@/data";
+import React from 'react';
+import Link from 'next/link';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay, Navigation, EffectFade } from 'swiper';
+import { Col, Container, Row } from 'react-bootstrap';
+import { SliderOneData } from '@/data';
 SwiperCore.use([Autoplay, Navigation, EffectFade]);
 const SliderOne = () => {
   const mainSlideOptions = {
     slidesPerView: 1,
     loop: true,
-    effect: "fade",
+    effect: 'fade',
     navigation: {
-      nextEl: "#main-slider-next",
-      prevEl: "#main-slider-prev"
+      nextEl: '#main-slider-next',
+      prevEl: '#main-slider-prev',
     },
     autoplay: {
-      delay: 5000
-    }
+      delay: 5000,
+    },
   };
   return (
     <section className="main-slider">
@@ -32,11 +32,11 @@ const SliderOne = () => {
                 <Col lg={12} className="text-center">
                   <p className="main-slider__subtext">{subTitle}</p>
                   <h3 className="main-slider__title">{title}</h3>
-                  <Link href={button.url}>
+                  {/* <Link href={button.url}>
                     <a className={`common_btn`}>
                       <span>{button.label}</span>
                     </a>
-                  </Link>
+                  </Link> */}
                 </Col>
               </Row>
             </Container>
